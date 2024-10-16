@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Membership Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: url('https://i.pinimg.com/564x/2c/f9/dc/2cf9dcfb54bcae981b4b4ccb5f598128.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #7b39ad; /* Set default text color */
+        }
+        .form1 {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+        }
+        h1 {
+            color: #7b39ad; /* Heading color */
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #7b39ad; /* Label color */
+        }
+        input[type="text"], 
+        input[type="number"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #7b39ad; /* Button background color */
+            color: white; /* Button text color */
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #5e2884; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1><span style="color: #93d8ed; font-family: Consolas;">Club Membership</span> Form</h1>
+    <div class="form1">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            
+            <label for="sections">Grade and Section:</label>
+            <select id="sections" name="sections" required>
+                <option value="9E">9 Emerald</option>
+                <option value="9R">9 Ruby</option>
+                <option value="9S">9 Sapphire</option>
+                <option value="9T">9 Topaz</option>
+            </select>
+            
+            <label for="clubs">Choose a Club:</label>
+            <select id="clubs" name="clubs" required>
+                <option value="dance">Dance Club</option>
+                <option value="marching">Marching Band Club</option>
+                <option value="varsity">Varsity</option>
+                <option value="comms">Communications Club</option>
+                <option value="glee">Glee Club</option>
+            </select>
+            
+            <label for="message">Why do you want to join this club?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Type your answer here..." required></textarea>
+            
+            <input type="submit" id="submit" name="submit" value="Join Now!">
+        </form>
+    </div>
+</body>
+</html>
+
